@@ -54,4 +54,30 @@ for (var i = 0; i < classe.length; i++) {
   console.log(classe[i]['cognome']);
   }
 
-var newStudent = [];
+var newStudent = {
+  nome: '',
+  cognome: '',
+  eta: '',
+}
+
+var studentName = prompt('Inserisci il tuo nome').trim();
+var studentCognome = prompt('Inserisci il tuo cognome').trim();
+var studentEta = parseInt( prompt('Inserisci la tua età'));
+
+for (var key in newStudent) {
+  if (key === 'nome') {
+    newStudent.nome = studentName;
+    console.log(newStudent[key]);
+  }
+  else if (key === 'cognome') {
+    newStudent.cognome = studentCognome;
+    console.log(newStudent[key]);
+  }
+  else if (key === 'eta') {
+    newStudent.eta = studentEta;
+    console.log(newStudent[key]);
+  }
+}
+
+classe.push(newStudent);
+console.log(classe);
